@@ -1,12 +1,146 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link rel="stylesheet" href="./css/style.css">
+  <link href="http://fonts.cdnfonts.com/css/comic-sans" rel="stylesheet">
     <title>Task-list Site</title>
 </head>
-<body>
+  <body>
     <div class="navbar">
         <nav>
         </nav>
     </div>
+    
+<!-- Start of To Do Banner -->
+    <div class="Banner-Img-Container">
+      <img src="./Images/Banners/Banner.png" alt="To do Banner">
+	        <a class="login-button" href="#loginpopup">Log In</a></div>
+        <div id="loginpopup" class="loginoverlay">
+	        <div class="loginpopup">
+		        <h2>Log In:</h2>
+		        <a class="loginclose" href="#">&times;</a>
+		        <div class="logincontent"> 
+            <div class="loginform">
+              <form class="register-form">
+                <input type="text" placeholder="name"/>
+                <input type="password" placeholder="password"/>
+                <input type="text" placeholder="email address"/>
+                <button>create</button>
+                <p class="message">Already registered? <a href="#">Sign In</a></p>
+              </form>
+              <form class="login-form">
+                <input type="text" placeholder="username"/>
+                <input type="password" placeholder="password"/>
+                <button>login</button>
+                <p class="message">Not registered? <a href="#">Create an account</a></p>
+              </form>
+            </div>
+		        </div>
+	        </div>
+        </div>
+<!-- End of To Do Banner -->
+    
+<!-- Start of Add Task button -->
+
+<div id="button-container">
+  <div class="box">
+	  <a class="taskbutton" href="#popup2">Add Task</a>
+  </div>
+
+  <div id="popup2" class="overlay">
+	  <div class="popup">
+		  <h2>Create Task</h2>
+		  <a class="close" href="#">&times;</a>
+		  <div class="popupcontent">
+			
+        <form method="post">
+          Name of Task:<br>
+          <input type="text" name="taskname" 
+            minlength="6"/>
+           <br>
+          <form method="post">
+            Task Description:<br>
+          <input type="text" 
+           name="taskdescription">
+            <br>
+          <form method="post">
+            Assigned to:<br>
+          <input type="text" 
+          name="taskassinged">
+            <br>
+          <label for="date">Due date:<br></label>
+          <input type="date" id="date" 
+            name="taskdue" value="">
+            <br>
+            <div class="statbox">
+          <label for="taskstatus"> <b>Current Task Status:</b>
+          </label>
+            <br>
+            <label for="stat1">Not Completed-</label>
+            <input name="taskstatus" 
+             type="radio" class="status" id="stat1" 
+             value="todo" />
+            <br>
+            <label for="stat2">In Progress-</label>
+            <input name="taskstatus" 
+             type="radio" class="status" id="stat2"
+              value="inprogress" />
+            <br>
+            <label for="stat3">To be Reviewed-</label>
+            <input name="taskstatus" 
+             type="radio" class="status" id="stat3" value="review" />
+            <br>
+            <label for="stat4">Completed-</label>
+            <input name="taskstatus" 
+             type="radio" class="status" id="stat4" value="done" />
+            </div>
+            <br>
+            <a class="taskbutton">Add to list</a>
+        </form>
+		  </div>
+	  </div>
+  </div>
+</div>
+
+          
+<!-- End of Add Task button -->
+
+<!-- Start of task container  -->
+    <div class= "container" id="taskcont">
+          <div class="taskbox" id="task-1"><span class="subhead">Task Name:</span> Wash the dishes<br>
+            <span class="subhead">Description:</span> Clean the dishes in the sink<br>
+            <span class="subhead">Assigned to:</span> Billy<br>
+            <span class="subhead">Due date:</span> 28/10/22<br>
+            <span class="subhead">Status</span>: Not complete<br>
+          </div>
+          <div class="taskbox" id="task-2"><span class="subhead">Task Name:</span> Repaint the bedroom<br>
+            <span class="subhead">Description:</span> Paint the bedroom blue<br>
+            <span class="subhead">Assigned to:</span> Ethan<br>
+            <span class="subhead">Due date:</span> 05/11/22<br>
+            <span class="subhead">Status:</span> In progress<br>
+          </div>
+          <div class="taskbox" id="task-3"><span class="subhead">Task Name:</span></span> Cook food<br>
+            <span class="subhead">Description:</span> Cook something up for the boys<br>
+            <span class="subhead">Assigned to:</span> Steven<br>
+            <span class="subhead">Due date:</span> 27/10/22<br>
+            <span class="subhead">Status:</span> To be reviewed<br>
+          </div>
+          <div class="taskbox" id="task-4"><span class="subhead">Task Name:</span> Create Mcdonalds website<br>
+            <span class="subhead">Description:</span> Mcdonalds rebranding<br>
+            <span class="subhead">Assigned to:</span> Steven, Ethan, Billy<br>
+            <span class="subhead">Due date:</span> 01/12/22<br>
+            <span class="subhead">Status:</span> In progress<br>
+          </div>
+          <div class="taskbox" id="task-5"><span class="subhead">Task Name:</span> Feed the dog<br>
+            <span class="subhead">Description:</span> Fill up doggy bowl with food<br>
+            <span class="subhead">Assigned to:</span> Steven<br>
+            <span class="subhead">Due date:</span> 27/10/22<br>
+            <span class="subhead">Status:</span> Completed<br>
+          </div>
+    </div>
+<!-- End of task container  -->
+  <footer class="footer">
+    
+  </footer>
 </body>
 </html>
