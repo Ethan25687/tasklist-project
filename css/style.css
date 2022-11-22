@@ -1,6 +1,6 @@
 /*Background colour*/
 body {
-    background-image: url("/Images/mesh-gradient.png");
+    background-image: url("../Images/mesh-gradient.png");
     background-size: cover;
     background-color: white;
   }
@@ -183,7 +183,7 @@ body {
   
   /* Start of To-do/Login by Ethan S*/
   .Banner-Img-Container {
-    background-image: url("/Images/Banners/Banner4.png");
+    background-image: url("../Images/Banners/Banner4.png");
     background-size: cover;
     display: flex;
     justify-content: center;
