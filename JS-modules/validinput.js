@@ -13,10 +13,14 @@ window.onload = function() {
 
   document.getElementById('date').addEventListener('change', toDate);
 
-  document.getElementById('subvin').addEventListener('click', selectRadio);
+  document.getElementById('subvin').addEventListener('mouseover', selectRadio);
 
   document.getElementById('subvin').addEventListener('click', jim);
 
+  document.getElementById("addass").addEventListener('click', strtIN);
+  document.getElementById("cls").addEventListener('click', stopIN);
+  
+  
 };
  
 let jim = () => {
@@ -99,23 +103,38 @@ let dun = document.getElementById("stat4").checked;
     return true;
   } else {
     document.getElementById("Rerror").innerHTML = 
-    "Please select one task status from above";
+    "";
     return false;
   }
 };
 
+let timeforcheck = null
 
+function strtIN () {
+  timeforcheck = setInterval(nosub, 500);
+};
+function stopIN() {
+  clearInterval(timeforcheck)
+};
 
-setInterval(nosub, 100);
 
 function nosub() {
   
   let uhoh = document.getElementById("subvin");
+  
+  let tskArray = [selectRadio(), toDate(), checkAss(), checkDesc(), checkName()]
+  
+  
 
-  if (selectRadio.value = false, toDate.value = false, checkAss.value = false,
-    checkDesc.value = false, checkName.value = false) {
-      uhoh.disabled = true;
-    } else {
-      uhoh.disabled = false;
-    }
+  if (tskArray.every(element => element === true) === true) {
+    uhoh.disabled = false;
+    document.getElementById("subvin").style.backgroundColor = "white";
+    document.getElementById("subvin").style.color = "black";
+  } else {
+    uhoh.disabled = true;
+    document.getElementById("subvin").style.backgroundColor = "red";
+    document.getElementById("subvin").style.color = "white";
+  };
+
 };
+
