@@ -60,6 +60,12 @@ body {
     background: #ffffff;
     opacity: 1;
   }
+
+  /* Date and time colour */
+  #time {
+    color: black;
+    z-index: -1;
+  }
   
   /* Hovering over button will allow the user to know when the button is being hovered over via change in button appearanch*/
   
