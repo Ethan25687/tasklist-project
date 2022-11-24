@@ -47,13 +47,13 @@
 
 <div id="button-container">
   <div class="box">
-	  <a class="taskbutton" href="#popup2">Add Task +</a>
+	  <a class="taskbutton" href="#popup2" id="addass">Add Task +</a>
   </div>
 
   <div id="popup2" class="overlay">
 	  <div class="popup">
 		  <h2>Create Task</h2>
-		  <a class="close" href="#">&times;</a>
+		  <a class="close" href="#" id="cls">&times;</a>
 		  <div class="popupcontent">
 			<form>
         
@@ -77,11 +77,12 @@
           <span class="validColor" id="assError"></span>
           <br>
           <label for="date">Due date:<br></label>
-          <input type="date" id="date" 
+          <input type="date" id="dater" 
             name="taskdue">
             <br>
             <span class="validColor" id="dateError"></span>
             <br>
+            <span>"Select one task status from below"</span>
         
         <!-- Unsure how to make radio required? -->
             
@@ -153,7 +154,7 @@
       <a href="#top" id="btt">Back to Top</a>
     </div>
   </footer>
-
+  <script src="./JS-modules/validinput.js"></script>
 <!-- End of footer -->
 
 <!-- Start of imported JS libraries -->
