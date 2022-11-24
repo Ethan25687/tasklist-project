@@ -1,9 +1,10 @@
+/*
 class TaskManager {
   constructor(task) {
       this._taskId = 0; // Integer
       this._taskName = taskName; // String
       this._taskDescription = taskDescription; // String
-      this._assignedTo = assignedTo; // String
+      this._taskAssignedTo = taskAssignedTo; // String
       this._taskDueDate = taskDueDate; // Date when task is due
       this._taskStatus = taskStatus; // String (TODO, IN PROGRESS, REVIEW, DONE)
     }
@@ -20,8 +21,8 @@ class TaskManager {
         return this._Taskdescription;
     }
 
-    get assignedTo() {
-        return this._assignedTo;
+    get taskAssignedTo() {
+        return this._taskAssignedTo;
     }
 
     get taskDueDate() {
@@ -56,3 +57,62 @@ class TaskManager {
         return randomNumber
     }
 } 
+*/
+
+addTask = (task) => {
+    const taskHTML = // DO NOT TOUCH CLASSES, they are required by Bootstrap!
+        '<div class="taskbox" id="taskWrap" style="width: 20rem;">\n' +
+        '    <div>\n' +
+        '        <h5 class="card-title"><b>Task:</b> '+task.taskName+'</h5>\n' +
+        '        <p><b>Description:</b> '+task.taskDescription+'</p>\n' +
+        '        <p><b>Assigned to:</b> '+task.taskAssignedTo+'</p>\n' +
+        '        <p><b>Due date:</b> '+task.taskDueDate+'</p>\n' +
+        '        <p><b>Status:</b> '+task.taskStatus+'</p>\n' +
+        '    </div>\n' +
+        '</div>\n' +
+        '<br/>';
+    const taskContainer = document.getElementById("taskcont");
+    taskContainer.innerHTML += taskHTML;
+}
+
+// placeholder test addTask function
+
+addTask({
+    'taskName':'Get Tea',
+    'taskDescription':'Raspberry Black Tea, Yum!',
+    'taskAssignedTo':'Ethan',
+    'taskDueDate':'testdate',
+    'taskStatus':'DONE'
+});
+
+addTask({
+    'taskName':'Get Chips',
+    'taskDescription':'Any kind of chips Chips',
+    'taskAssignedTo':'Steven, Billy, Cameron',
+    'taskDueDate':'testdate',
+    'taskStatus':'TODO'
+})
+
+addTask({
+    'taskName':'Get Chips',
+    'taskDescription':'Any kind of chips Chips',
+    'taskAssignedTo':'Steven, Billy, Cameron',
+    'taskDueDate':'testdate',
+    'taskStatus':'TODO'
+})
+
+addTask({
+    'taskName':'Get Chips',
+    'taskDescription':'Any kind of chips Chips',
+    'taskAssignedTo':'Steven, Billy, Cameron',
+    'taskDueDate':'testdate',
+    'taskStatus':'TODO'
+})
+
+addTask({
+    'taskName':'Get Chips',
+    'taskDescription':'Any kind of chips Chips',
+    'taskAssignedTo':'Steven, Billy, Cameron',
+    'taskDueDate':'testdate',
+    'taskStatus':'TODO'
+})
