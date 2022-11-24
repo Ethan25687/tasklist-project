@@ -3,7 +3,7 @@ class TaskManager {
       this._taskId = 0; // Integer
       this._taskName = taskName; // String
       this._taskDescription = taskDescription; // String
-      this._assignedTo = assignedTo; // String
+      this._taskAssignedTo = taskAssignedTo; // String
       this._taskDueDate = taskDueDate; // Date when task is due
       this._taskStatus = taskStatus; // String (TODO, IN PROGRESS, REVIEW, DONE)
     }
@@ -20,8 +20,8 @@ class TaskManager {
         return this._Taskdescription;
     }
 
-    get assignedTo() {
-        return this._assignedTo;
+    get taskAssignedTo() {
+        return this._taskAssignedTo;
     }
 
     get taskDueDate() {
