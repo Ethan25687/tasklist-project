@@ -1,4 +1,4 @@
-// validinput.js = Editors = Billy
+
 
 window.onload = function() {
 
@@ -11,11 +11,9 @@ window.onload = function() {
   document.getElementById('assign').addEventListener('focus', checkAss);
   document.getElementById('assign').addEventListener('focusout', checkAss);
 
-  document.getElementById('date').addEventListener('change', toDate);
+  document.getElementById('dater').addEventListener('change', toDate);
 
   document.getElementById('subvin').addEventListener('mouseover', selectRadio);
-
-  document.getElementById('subvin').addEventListener('click', jim);
 
   document.getElementById("addass").addEventListener('click', strtIN);
   document.getElementById("cls").addEventListener('click', stopIN);
@@ -23,10 +21,6 @@ window.onload = function() {
   
 };
  
-let jim = () => {
-  console.log("Event listener is working!");
-};
-
 
 function checkName() { 
   let nmlength = document.getElementById("taskn").value; 
@@ -78,7 +72,7 @@ function checkAss() {
 function toDate() {
   let today = new Date();
 
-  let sugDate =new Date(document.getElementById("date").value);
+  let sugDate =new Date(document.getElementById("dater").value);
 
   if (sugDate < today) {
     document.getElementById("dateError").innerHTML = 
@@ -108,13 +102,13 @@ let dun = document.getElementById("stat4").checked;
   }
 };
 
-let timeforcheck = null
+var timeForCh = null
 
 function strtIN () {
-  timeforcheck = setInterval(nosub, 500);
+  timeForCh = setInterval(nosub, 500);
 };
 function stopIN() {
-  clearInterval(timeforcheck)
+  clearInterval(timeForCh)
 };
 
 
