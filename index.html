@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <script src="./JS-modules/validinput.js"></script>
   <link rel="stylesheet" href="./css/style.css">
   <link href="http://fonts.cdnfonts.com/css/comic-sans" rel="stylesheet">
   <link rel="stylesheet" href="javaScript.js" type="text/Javascript">
@@ -59,24 +60,29 @@
 			<form>
         
           Name of Task:<br>
-            <input type="text" name="taskname" 
-            minlength="4" required="required">
+            <input type="text" name="taskname" id="taskn">
+            <br>
+            <span class="validColor" id="TNerror"></span>
           <br>
           
             Task Description:<br>
           <input type="text" 
-           name="taskdescription" minlength="2" 
-            required>
+           name="taskdescription" id="taskdesc">
+           <br>
+           <span class="validColor" id="TDerror"></span>
           <br>
           
             Assigned to:<br>
           <input type="text" 
-          name="taskassinged" placeholder="Yo Mama"
-            minlength="2" required>
+          name="taskassinged" placeholder="Yo Mama" id="assign">
+          <br>
+          <span class="validColor" id="assError"></span>
           <br>
           <label for="date">Due date:<br></label>
           <input type="date" id="date" 
-            name="taskdue" required>
+            name="taskdue">
+            <br>
+            <span class="validColor" id="dateError"></span>
             <br>
         
         <!-- Unsure how to make radio required? -->
@@ -108,8 +114,9 @@
                type="radio" class="status" id="stat4" 
                 value="done" />
             </div>
+            <span id="Rerror"></span>
             <input type="submit" value="Add Task"
-              class="taskbutton addlist"></input>
+              class="taskbutton addlist" id="subvin"></input>
       </form>
 		  </div>
 	  </div>
