@@ -121,13 +121,13 @@ addTask({
 
 //Below code is the values of inputs in form
 
-const input001 = document.getElementById("taskn");
-const input002 = document.getElementById("taskdesc");
-const input003 = document.getElementById("assign");
-const input004 = document.getElementById("dater");
-let input005 = null
+const inputTask = document.getElementById("taskn");
+const inputDesc = document.getElementById("taskdesc");
+const inputAss = document.getElementById("assign");
+const inputDate = document.getElementById("dater");
+let inputRad = null
 
-//runs fnd005 which changes inputoo5 to checkd button
+//runs fnd005 which changes inputRad to checkd button
 let radbtns = document.getElementsByClassName("status");
 for (var i=0; i<radbtns.length; i++) {
     radbtns[i].addEventListener("click", fnd005);
@@ -141,19 +141,19 @@ function fnd005() {
  let dunch = document.getElementById("stat4");
 
  if (toDoch.checked === true) { 
-   input005 = document.getElementById("stat1").value;
+   inputRad = document.getElementById("stat1").value;
  } else if (inProgch.checked === true) {
-   input005 = document.getElementById("stat2").value;
+   inputRad = document.getElementById("stat2").value;
  } else if (toBeRevch.checked === true) {
-   input005 = document.getElementById("stat3").value;
+   inputRad = document.getElementById("stat3").value;
  } else if(dunch.checked === true) {
-   input005 = document.getElementById("stat4").value;
+   inputRad = document.getElementById("stat4").value;
 } else {
-   input005 = null;
+   inputRad = null;
  };
 
- return input005
+ return inputRad
 };
 
 //code below just for checking if its working
-//setInterval(()=>{console.log(input005)}, 2000);
+//setInterval(()=>{console.log(inputRad)}, 2000);
