@@ -10,4 +10,4 @@ let min = date.getMinutes();
 let currentDate = `${hour}:${min} | ${day}-${month}-${year}`;
 const dateH = document.getElementById('time');
 dateH.innerHTML = `Current date ${currentDate}`;
-console.log(currentDate);}, 1000)
+}, 1000)
