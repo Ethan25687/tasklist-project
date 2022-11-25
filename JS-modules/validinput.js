@@ -26,7 +26,6 @@ function checkName() {
   let nmlength = document.getElementById("taskn").value; 
   const minlength = 1;
   const maxlength = 8;
-  console.log('checking');
 
   if (nmlength< minlength || nmlength> maxlength) { 
       document.getElementById("TNerror").innerHTML =

@@ -115,4 +115,45 @@ addTask({
     'taskAssignedTo':'Steven, Billy, Cameron',
     'taskDueDate':'testdate',
     'taskStatus':'TODO'
-})
+});
+
+
+
+//Below code is the values of inputs in form
+
+const input001 = document.getElementById("taskn");
+const input002 = document.getElementById("taskdesc");
+const input003 = document.getElementById("assign");
+const input004 = document.getElementById("dater");
+let input005 = null
+
+//runs fnd005 which changes inputoo5 to checkd button
+let radbtns = document.getElementsByClassName("status");
+for (var i=0; i<radbtns.length; i++) {
+    radbtns[i].addEventListener("click", fnd005);
+}
+
+
+function fnd005() {
+ let toDoch = document.getElementById("stat1");
+ let inProgch = document.getElementById("stat2");
+ let toBeRevch = document.getElementById("stat3");
+ let dunch = document.getElementById("stat4");
+
+ if (toDoch.checked === true) { 
+   input005 = document.getElementById("stat1").value;
+ } else if (inProgch.checked === true) {
+   input005 = document.getElementById("stat2").value;
+ } else if (toBeRevch.checked === true) {
+   input005 = document.getElementById("stat3").value;
+ } else if(dunch.checked === true) {
+   input005 = document.getElementById("stat4").value;
+} else {
+   input005 = null;
+ };
+
+ return input005
+};
+
+//code below just for checking if its working
+//setInterval(()=>{console.log(input005)}, 2000);
