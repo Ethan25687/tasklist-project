@@ -60,7 +60,7 @@ class TaskManager {
 */
 
 addTask = (task) => {
-    const taskHTML = // DO NOT TOUCH CLASSES, they are required by Bootstrap!
+    const taskHTML =
         '<div class="taskbox" id="taskWrap" style="width: 20rem;">\n' +
         '    <div>\n' +
         '        <h5 class="card-title"><b>Task:</b> '+task.taskName+'</h5>\n' +
@@ -73,7 +73,7 @@ addTask = (task) => {
         '<br/>';
     const taskContainer = document.getElementById("taskcont");
     taskContainer.innerHTML += taskHTML;
-}
+};
 
 // placeholder test addTask function
 
@@ -91,7 +91,7 @@ addTask({
     'taskAssignedTo':'Steven, Billy, Cameron',
     'taskDueDate':'testdate',
     'taskStatus':'TODO'
-})
+});
 
 addTask({
     'taskName':'Get Chips',
@@ -99,7 +99,7 @@ addTask({
     'taskAssignedTo':'Steven, Billy, Cameron',
     'taskDueDate':'testdate',
     'taskStatus':'TODO'
-})
+});
 
 addTask({
     'taskName':'Get Chips',
@@ -107,7 +107,7 @@ addTask({
     'taskAssignedTo':'Steven, Billy, Cameron',
     'taskDueDate':'testdate',
     'taskStatus':'TODO'
-})
+});
 
 addTask({
     'taskName':'Get Chips',
@@ -115,4 +115,4 @@ addTask({
     'taskAssignedTo':'Steven, Billy, Cameron',
     'taskDueDate':'testdate',
     'taskStatus':'TODO'
-})
+});
