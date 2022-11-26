@@ -15,8 +15,8 @@ window.onload = function() {
 
   document.getElementById('subvin').addEventListener('mouseover', selectRadio);
 
-  document.getElementById("addass").addEventListener('click', strtIN);
-  document.getElementById("cls").addEventListener('click', stopIN);
+//  document.getElementById("addass").addEventListener('click', strtIN);
+//  document.getElementById("cls").addEventListener('click', stopIN);
   
   
 };
@@ -73,9 +73,9 @@ function toDate() {
 
   let sugDate =new Date(document.getElementById("dater").value);
 
-  if (sugDate < today) {
+  if (sugDate < today || !Date.parse(sugDate)) {
     document.getElementById("dateError").innerHTML = 
-    "Cannot select a date that has already passed"
+    "Must select a date. Cannot select a date that has already passed"
     return false;
   } else {
     document.getElementById("dateError").innerHTML = ""
@@ -101,14 +101,15 @@ let dun = document.getElementById("stat4").checked;
   }
 };
 
-var timeForCh = null
+//var timeForCh = null
 
-function strtIN () {
-  timeForCh = setInterval(nosub, 500);
-};
-function stopIN() {
-  clearInterval(timeForCh)
-};
+//function strtIN () {
+//  timeForCh = 
+  setInterval(nosub, 1000);
+//};
+//function stopIN() {
+//  clearInterval(timeForCh)
+//};
 
 
 function nosub() {
@@ -130,4 +131,3 @@ function nosub() {
   };
 
 };
-
