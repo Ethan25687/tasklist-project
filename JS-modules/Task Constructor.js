@@ -86,6 +86,8 @@ addTask({
 });
 
 //Below code is the values of inputs in form
+//To get const value add .value to input eg( inputTask.value)
+//except for inputRad as it does not need .value eg ( inputRad )
 
 const inputTask = document.getElementById("taskn");
 const inputDesc = document.getElementById("taskdesc");
@@ -93,7 +95,7 @@ const inputAss = document.getElementById("assign");
 const inputDate = document.getElementById("dater");
 let inputRad = null
 
-//runs fnd005 which changes inputRad to checkd button
+//runs fnd005 which changes inputRad to checked button
 let radbtns = document.getElementsByClassName("status");
 for (var i=0; i<radbtns.length; i++) {
     radbtns[i].addEventListener("click", fnd005);
