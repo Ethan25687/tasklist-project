@@ -75,49 +75,15 @@ addTask = (task) => {
     taskContainer.innerHTML += taskHTML;
 };
 
-// placeholder test addTask function
+// Use following code to test rendering of tasks
 
 addTask({
     'taskName':'Get Tea',
-    'taskDescription':'Raspberry Black Tea, Yum!',
+    'taskDescription':'Get Raspberry Black Tea, Yum!',
     'taskAssignedTo':'Ethan',
     'taskDueDate':'testdate',
     'taskStatus':'DONE'
 });
-
-addTask({
-    'taskName':'Get Chips',
-    'taskDescription':'Any kind of chips Chips',
-    'taskAssignedTo':'Steven, Billy, Cameron',
-    'taskDueDate':'testdate',
-    'taskStatus':'TODO'
-});
-
-addTask({
-    'taskName':'Get Chips',
-    'taskDescription':'Any kind of chips Chips',
-    'taskAssignedTo':'Steven, Billy, Cameron',
-    'taskDueDate':'testdate',
-    'taskStatus':'TODO'
-});
-
-addTask({
-    'taskName':'Get Chips',
-    'taskDescription':'Any kind of chips Chips',
-    'taskAssignedTo':'Steven, Billy, Cameron',
-    'taskDueDate':'testdate',
-    'taskStatus':'TODO'
-});
-
-addTask({
-    'taskName':'Get Chips',
-    'taskDescription':'Any kind of chips Chips',
-    'taskAssignedTo':'Steven, Billy, Cameron',
-    'taskDueDate':'testdate',
-    'taskStatus':'TODO'
-});
-
-
 
 //Below code is the values of inputs in form
 //To get const value add .value to input eg( inputTask.value)
