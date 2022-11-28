@@ -89,10 +89,10 @@ addTask({
 //To get const value add .value to input eg( inputTask.value)
 //except for inputRad as it does not need .value eg ( inputRad )
 
-const inputTask = document.getElementById("taskn");
-const inputDesc = document.getElementById("taskdesc");
-const inputAss = document.getElementById("assign");
-const inputDate = document.getElementById("dater");
+let inputTask = document.getElementById("taskn");
+let inputDesc = document.getElementById("taskdesc");
+let inputAss = document.getElementById("assign");
+let inputDate = document.getElementById("dater");
 let inputRad = null
 
 //runs fnd005 which changes inputRad to checked button
@@ -163,24 +163,26 @@ function loadTasks() {
   });
 }
 */
+
+
 const getAllInputs = () =>{
-    'taskName':inputTask.value,
-    'taskDescription':inputDesc.value,
-    'taskAssignedTo':inputAss.value,
-    'taskDueDate':inputDate.value,
-    'taskStatus':inputRad
+    let taskNameIn= inputTask.value;
+    let taskDescIn=  inputDesc.value;
+    let taskAssIn= inputAss.value;
+    let taskDueIn= inputDate.value;
+    let taskStatIn= inputRad;
+    const taskInput = {
+
+    'taskName': taskNameIn,
+    'taskDescription': taskDescIn,
+    'taskAssignedTo': taskAssIn,
+    'taskDueDate': taskDueIn,
+    'taskStatus': taskStatIn
+    }
+    return taskInput;
 }
 
-function addTasks(){
+
+document.getElementById("subvin").onclick = () =>{
     addTask(getAllInputs());
 }
-
-
-
-
-document.querySelector("#taskcont").addEventListener("submit", e =>{
-    e.preventDefault();
-    addTasks();
-
-});
-
