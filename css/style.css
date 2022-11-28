@@ -160,6 +160,24 @@
   span.subhead{
     font-weight: bold;
   }
+
+button.delete{
+  text-align: center;
+  font-weight:bold;
+  background-color: #925961;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  height: 100%;
+  width: 70px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+button.delete:hover{
+  background-color: #b60b22;
+}
   /* End of Flexbox stuff */
   
   /* Start of Img Banner by Ethan S*/
@@ -261,3 +279,5 @@
     }
   }
   /* End of Responsive Stuff */
+
+  

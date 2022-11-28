@@ -68,6 +68,7 @@ addTask = (task) => {
         '        <p><b>Assigned to:</b> '+task.taskAssignedTo+'</p>\n' +
         '        <p><b>Due date:</b> '+task.taskDueDate+'</p>\n' +
         '        <p><b>Status:</b> '+task.taskStatus+'</p>\n' +
+        '        <button class="delete">DELETE TASK</button>\n' +
         '    </div>\n' +
         '</div>\n' +
         '<br/>';
@@ -76,7 +77,7 @@ addTask = (task) => {
 };
 
 // Use following code to test rendering of tasks
-
+/*
 addTask({
     'taskName':'Get Tea',
     'taskDescription':'Get Raspberry Black Tea, Yum!',
@@ -84,7 +85,7 @@ addTask({
     'taskDueDate':'testdate',
     'taskStatus':'DONE'
 });
-
+*/
 //Below code is the values of inputs in form
 //To get const value add .value to input eg( inputTask.value)
 //except for inputRad as it does not need .value eg ( inputRad )
