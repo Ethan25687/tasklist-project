@@ -2,7 +2,7 @@ addTask = (task) => {
     const taskHTML =
         '<div class="taskbox" id="taskWrap" style="width: 20rem;">\n' +
         '    <div>\n' +
-        '        <h5 class="card-title"><b>Task:</b> '+task.taskName+'</h5>\n' +
+        '        <h2><b>Task:</b> '+task.taskName+'</h2>\n' +
         '        <p><b>Description:</b> '+task.taskDescription+'</p>\n' +
         '        <p><b>Assigned to:</b> '+task.taskAssignedTo+'</p>\n' +
         '        <p><b>Due date:</b> '+task.taskDueDate+'</p>\n' +
