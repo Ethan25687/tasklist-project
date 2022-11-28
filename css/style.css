@@ -206,6 +206,9 @@ button.delete:hover{
     padding-right: 10%;
     color: white;
     text-shadow: 2px 2px gray;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
   }
   div.Do-Right {
     text-align: center;
@@ -215,6 +218,18 @@ button.delete:hover{
     padding-right: 10%;
     color: white;
     text-shadow: 2px 2px gray;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+  }
+
+  @-webkit-keyframes glow {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #409de3, 0 0 40px #0756bd, 0 0 50px #001aff, 0 0 60px #0d4cc2, 0 0 70px #2090c0;
+    }
+    to {
+      text-shadow: 0 0 20px #fff, 0 0 30px #324ace, 0 0 40px #0000ffc7, 0 0 50px #1762d4, 0 0 60px #1d2ddc, 0 0 70px #1b97df, 0 0 80px #13a9db;
+    }
   }
   /* End of To-Left + Do-Right Stuff */
   
