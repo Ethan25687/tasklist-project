@@ -105,7 +105,7 @@ let dun = document.getElementById("stat4").checked;
 
 //function strtIN () {
 //  timeForCh = 
-  setInterval(nosub, 1000);
+  setInterval(nosub, 500);
 //};
 //function stopIN() {
 //  clearInterval(timeForCh)
