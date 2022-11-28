@@ -123,7 +123,7 @@
   } 
   /* End of popup window "Add Task" - Billy */
   
-  /* Start of Flexbox stuff */
+  /* Start of Task container + Task boxes */
   
   div.container{
     display: flex;
@@ -131,6 +131,12 @@
     align-items: center;
     flex-wrap: wrap;
     min-height: 75vh;
+  }
+
+  #taskcont {
+    background-image: url('/Images/corkboard.png');
+    background-size:cover;
+    border: solid white 5px;
   }
   
   .taskbox{
@@ -156,10 +162,6 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     background-color: #CCF4FA;
   }
-  
-  span.subhead{
-    font-weight: bold;
-  }
 
 button.delete{
   text-align: center;
@@ -178,7 +180,8 @@ button.delete{
 button.delete:hover{
   background-color: #b60b22;
 }
-  /* End of Flexbox stuff */
+
+/* End of Task container + Task boxes */
   
   /* Start of Img Banner by Ethan S*/
   .Banner-Img-Container {
