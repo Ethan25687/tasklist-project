@@ -182,10 +182,16 @@ const getAllInputs = () =>{
     return taskInput;
 }
 
+const clearForm = () =>{
+    inputTask.value = '';
+    inputDesc.value = '';
+    inputAss.value = '';
+    inputDate.value= '';
+}
 
 document.getElementById("subvin").onclick = (e) =>{
     e.preventDefault();
     addTask(getAllInputs());
+    clearForm();
 }
 
-let el= document.getElementById("subvin");
