@@ -2,7 +2,6 @@
 <html>
 <head>
   <link rel="stylesheet" href="./css/style.css">
-  <link rel="stylesheet" href="./css/dateTime.css">
   <link href="http://fonts.cdnfonts.com/css/comic-sans" rel="stylesheet">
   <link rel="stylesheet" href="javaScript.js" type="text/Javascript">
     <title>Task-list Site</title>
@@ -10,75 +9,51 @@
   <body>
 <!--Span for current time Date-->
 <span id='time'></span>
-<script src="JS-modules/javaScript.js">  </script>
 <!-- Anchor for back to top button -->
     <a name="top"></a>
 <!-- Start of To Do Banner -->
     <div class="Banner-Img-Container">
       <div class='To-Left'>To</div>
-
-	          <a class="login-button" href="#loginpopup">Log In</a>
+            <a class="taskbutton" href="#popup2" id="addass">Add Task +</a>
             <div class='Do-Right'>Do</div>
     </div>
-          <div id="loginpopup" class="loginoverlay">
-	          <div class="loginpopup">
-		          <h2>Log In:</h2>
-		          <a class="loginclose" href="#">&times;</a>
-		          <div class="logincontent"> 
-              <div class="loginform">
-<!--                 <form class="register-form">
-                  <input type="text" placeholder="name"/>
-                  <input type="password" placeholder="password"/>
-                  <input type="text" placeholder="email address"/>
-                  <button>create</button>
-                  <p class="message">Already registered? <a href="#">Sign In</a></p>
-                </form> -->
-                <form class="login-form">
-                  <input type="text" placeholder="username"/>
-                  <input type="password" placeholder="password"/>
-                  <button>login</button>
-                  <p class="message">Not registered? <a href="https://www.youtube.com/watch?v=oml5cFYAlK8" target="_blank">Create an account</a></p>
-                </form>
-              </div>
-		          </div>
-	          </div>
-          </div>
+
 <!-- End of To Do Banner -->
     
-<!-- Start of Add Task button -->
-
-<div id="button-container">
-  <div class="box">
-	  <a class="taskbutton" href="#popup2">Add Task +</a>
-  </div>
-
+<!-- Start of Add Task button function-->
   <div id="popup2" class="overlay">
 	  <div class="popup">
 		  <h2>Create Task</h2>
-		  <a class="close" href="#">&times;</a>
+		  <a class="close" href="#" id="cls">&times;</a>
 		  <div class="popupcontent">
 			<form>
         
           Name of Task:<br>
-            <input type="text" name="taskname" 
-            minlength="4" required="required">
+            <input type="text" name="taskname" id="taskn">
+            <br>
+            <span class="validColor" id="TNerror"></span>
           <br>
           
             Task Description:<br>
           <input type="text" 
-           name="taskdescription" minlength="2" 
-            required>
+           name="taskdescription" id="taskdesc">
+           <br>
+           <span class="validColor" id="TDerror"></span>
           <br>
           
             Assigned to:<br>
           <input type="text" 
-          name="taskassinged" placeholder="Yo Mama"
-            minlength="2" required>
+          name="taskassinged" placeholder="Yo Mama" id="assign">
+          <br>
+          <span class="validColor" id="assError"></span>
           <br>
           <label for="date">Due date:<br></label>
-          <input type="date" id="date" 
-            name="taskdue" required>
+          <input type="date" id="dater" 
+            name="taskdue">
             <br>
+            <span class="validColor" id="dateError"></span>
+            <br>
+            <span>Select one task status from below</span>
         
         <!-- Unsure how to make radio required? -->
             
@@ -91,26 +66,27 @@
               </label>
               <input name="taskstatus" 
                type="radio" class="status" id="stat1" 
-               value="todo" />
+               value="Not Completed" />
               <br>
               <label for="stat2">In Progress-</label>
               <input name="taskstatus" 
                type="radio" class="status" id="stat2"
-               value="inprogress" />
+               value="In Progress" />
               <br>
               <label for="stat3">To be Reviewed-
               </label>
               <input name="taskstatus" 
                type="radio" class="status" id="stat3" 
-                value="review" />
+                value="To be Reviewed" />
               <br>
               <label for="stat4">Completed-</label>
               <input name="taskstatus" 
                type="radio" class="status" id="stat4" 
-                value="done" />
+                value="Completed" />
             </div>
+            <span id="Rerror"></span>
             <input type="submit" value="Add Task"
-              class="taskbutton addlist"></input>
+              class="taskbutton addlist" id="subvin"></input>
       </form>
 		  </div>
 	  </div>
@@ -129,36 +105,7 @@
 }
 </style>
     <div class= "container" id="taskcont">
-          <div class="taskbox" id="task-1"><span class="subhead">Task Name:</span> Wash the dishes<br>
-            <span class="subhead">Description:</span> Clean the dishes in the sink<br>
-            <span class="subhead">Assigned to:</span> Billy<br>
-            <span class="subhead">Due date:</span> 28/10/22<br>
-            <span class="subhead">Status</span>: Not complete<br>
-          </div>
-          <div class="taskbox" id="task-2"><span class="subhead">Task Name:</span> Repaint the bedroom<br>
-            <span class="subhead">Description:</span> Paint the bedroom blue<br>
-            <span class="subhead">Assigned to:</span> Ethan<br>
-            <span class="subhead">Due date:</span> 05/11/22<br>
-            <span class="subhead">Status:</span> In progress<br>
-          </div>
-          <div class="taskbox" id="task-3"><span class="subhead">Task Name:</span> Cook food<br>
-            <span class="subhead">Description:</span> Cook something up for the boys<br>
-            <span class="subhead">Assigned to:</span> Steven<br>
-            <span class="subhead">Due date:</span> 27/10/22<br>
-            <span class="subhead">Status:</span> To be reviewed<br>
-          </div>
-          <div class="taskbox" id="task-4"><span class="subhead">Task Name:</span> Create Mcdonalds website<br>
-            <span class="subhead">Description:</span> Mcdonalds rebrand<br>
-            <span class="subhead">Assigned to:</span> Steven, Ethan, Billy<br>
-            <span class="subhead">Due date:</span> 01/12/22<br>
-            <span class="subhead">Status:</span> In progress<br>
-          </div>
-          <div class="taskbox" id="task-5"><span class="subhead">Task Name:</span> Feed the dog<br>
-            <span class="subhead">Description:</span> Fill up doggy bowl with food<br>
-            <span class="subhead">Assigned to:</span> Steven<br>
-            <span class="subhead">Due date:</span> 27/10/22<br>
-            <span class="subhead">Status:</span> Completed<br>
-          </div>
+
     </div>
 <!-- End of task container  -->
 
@@ -178,8 +125,17 @@
       <a href="#top" id="btt">Back to Top</a>
     </div>
   </footer>
-
+  <script src="./JS-modules/validinput.js"></script>
 <!-- End of footer -->
-    
+
+<!-- Start of imported JS libraries -->
+
+<!-- End of imported JS libraries -->
+
+<!-- Start of Custom scripts -->
+<script src="./JS-modules/validinput.js"></script>
+<script src="JS-modules/javaScript.js">  </script>
+<script src="JS-modules/Task Constructor.js">  </script>
+<!-- End of Custom scripts -->
 </body>
 </html>
