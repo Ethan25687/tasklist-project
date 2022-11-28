@@ -183,6 +183,9 @@ const getAllInputs = () =>{
 }
 
 
-document.getElementById("subvin").onclick = () =>{
+document.getElementById("subvin").onclick = (e) =>{
+    e.preventDefault();
     addTask(getAllInputs());
 }
+
+let el= document.getElementById("subvin");
