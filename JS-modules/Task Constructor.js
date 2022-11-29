@@ -1,12 +1,15 @@
-window.onload = loadTasks;
-
-const loadTasks = () =>{
+/*const loadTasks = () =>{
   let taskArray = Array.from(JSON.parse(localStorage.getItem("taskArray")));
-  taskArray.forEach(task => {
-    addTask(task);
-    
-  }
+  taskArray.forEach(task =>taskContainer.innerHTML = addTask(taskArray(task)));
 };
+*/
+let taskArray = [];
+let savedTask = JSON.parse(localStorage.getItem("taskArray")) || [];
+
+
+
+
+
 
 addTask = (task) => {
     const taskHTML =
@@ -24,6 +27,8 @@ addTask = (task) => {
     const taskContainer = document.getElementById("taskcont");
     taskContainer.innerHTML += taskHTML;
 };
+window.onload = addTask(taskArray);
+
 //let tasks = Array.from(JSON.parse(localStorage.getItem("tasks")));
 // Use following code to test rendering of tasks
 /*
@@ -140,7 +145,7 @@ const clearForm = () =>{
 }
 
 
-let taskArray = [];
+
 document.getElementById("subvin").onclick = (e) =>{
     e.preventDefault();
     addTask(getAllInputs());
@@ -152,6 +157,7 @@ document.getElementById("subvin").onclick = (e) =>{
 }
 localStorage.taskArray = JSON.stringify(taskArray);
 let data = JSON.parse(localStorage.getItem('taskArray'));
+localStorage.setItem(taskArray, taskArray);
 
 
 //code for delete btn below
