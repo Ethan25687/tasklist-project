@@ -8,6 +8,7 @@ addTask = (task) => {
         '        <p><b>Due date:</b> '+task.taskDueDate+'</p>\n' +
         '        <p><b>Status:</b> '+task.taskStatus+'</p>\n' +
         '        <button class="delete">DELETE TASK</button>\n' +
+        '        <button class="complete">COMPLETE TASK</button>\n' +
         '    </div>\n' +
         '</div>\n';
     const taskContainer = document.getElementById("taskcont");
@@ -134,8 +135,11 @@ document.getElementById("subvin").onclick = (e) =>{
     clearForm();
 }
 
+
+//code for delete btn below
+
 document.getElementById("subvin").addEventListener("click", billyno);
-//code for delete btn below 
+
 function billyno() {
 let delThisNow = document.getElementsByClassName("delete");
 for (var i=0; i<delThisNow.length; i++) {
@@ -149,3 +153,12 @@ let testdelete =() => {
 function delDiv() {
   this.parentNode.parentNode.parentNode.removeChild(this.parentNode.parentNode);
 };
+
+
+
+// Complete Task button function WIP
+// const completeTask = () =>{
+//   const taskCompleteStatus = {
+//     'taskStatus': 'Completed'
+//   }
+// }
