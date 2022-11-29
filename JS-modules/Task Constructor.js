@@ -8,6 +8,7 @@ addTask = (task) => {
         '        <p><b>Due date:</b> '+task.taskDueDate+'</p>\n' +
         '        <p><b>Status:</b> '+task.taskStatus+'</p>\n' +
         '        <button class="delete">DELETE TASK</button>\n' +
+        '        <button class="complete">COMPLETE TASK</button>\n' +
         '    </div>\n' +
         '</div>\n' +
         '<br/>';
@@ -135,3 +136,9 @@ document.getElementById("subvin").onclick = (e) =>{
     clearForm();
 }
 
+// Complete Task button function WIP
+// const completeTask = () =>{
+//   const taskCompleteStatus = {
+//     'taskStatus': 'Completed'
+//   }
+// }
