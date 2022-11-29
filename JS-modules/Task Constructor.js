@@ -1,3 +1,13 @@
+window.onload = loadTasks;
+
+const loadTasks = () =>{
+  let taskArray = Array.from(JSON.parse(localStorage.getItem("taskArray")));
+  taskArray.forEach(task => {
+    addTask(task);
+    
+  }
+};
+
 addTask = (task) => {
     const taskHTML =
         '<div class="taskbox" id="taskWrap" style="width: 20rem;">\n' +
@@ -14,7 +24,7 @@ addTask = (task) => {
     const taskContainer = document.getElementById("taskcont");
     taskContainer.innerHTML += taskHTML;
 };
-
+//let tasks = Array.from(JSON.parse(localStorage.getItem("tasks")));
 // Use following code to test rendering of tasks
 /*
 addTask({
@@ -129,11 +139,19 @@ const clearForm = () =>{
     inputDate.value= '';
 }
 
+
+let taskArray = [];
 document.getElementById("subvin").onclick = (e) =>{
     e.preventDefault();
     addTask(getAllInputs());
+    const updateTaskArray = () =>{
+      taskArray.push(getAllInputs());
+    }
+    updateTaskArray();
     clearForm();
 }
+localStorage.taskArray = JSON.stringify(taskArray);
+let data = JSON.parse(localStorage.getItem('taskArray'));
 
 
 //code for delete btn below
@@ -162,3 +180,5 @@ function delDiv() {
 //     'taskStatus': 'Completed'
 //   }
 // }
+
+
