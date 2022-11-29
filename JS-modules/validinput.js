@@ -27,7 +27,7 @@ function checkName() {
   const minlength = 1;
   const maxlength = 8;
 
-  if (nmlength< minlength || nmlength> maxlength) { 
+  if (nmlength.length< minlength || nmlength.length> maxlength) { 
       document.getElementById("TNerror").innerHTML =
         "Please put a name for the task between 1 and 8 characters";
       return false;
@@ -42,7 +42,7 @@ function checkDesc() {
   const minlength = 1;
   const maxlength = 15;
    
-  if (nmlength< minlength || nmlength> maxlength) { 
+  if (nmlength.length< minlength || nmlength.length> maxlength) { 
     document.getElementById("TDerror").innerHTML =
     "Please input a description for the task between 1 and 15 characters";
    return false;
@@ -57,7 +57,7 @@ function checkAss() {
   const minlength = 1;
   const maxlength = 8;
    
-  if (nmlength< minlength || nmlength> maxlength) { 
+  if (nmlength.length< minlength || nmlength.length> maxlength) { 
    document.getElementById("assError").innerHTML =
     "Field should contain between 1 and 8 characters";
    return false;
