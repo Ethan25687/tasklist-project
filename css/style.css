@@ -181,6 +181,23 @@ button.delete:hover{
   background-color: #b60b22;
 }
 
+button.complete{
+  text-align: center;
+  font-weight:bold;
+  background-color: #599265;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  height: 100%;
+  width: 90px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+button.complete:hover{
+  background-color: #0bb627;
+}
 /* End of Task container + Task boxes */
   
   /* Start of Img Banner by Ethan S*/
