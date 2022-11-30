@@ -1,3 +1,12 @@
+let taskArray = [];
+var retrievedTask = JSON.parse(localStorage.getItem("savedTask")) || [];
+const loadTasks = () =>{
+  let taskArray = retrievedTask;
+  taskArray.forEach(taskItem => addTask(taskItem));
+};
+
+
+
 addTask = (task) => {
     const taskHTML =
         '<div class="taskbox" id="taskWrap" style="width: 20rem;">\n' +
@@ -8,13 +17,15 @@ addTask = (task) => {
         '        <p><b>Due date:</b> '+task.taskDueDate+'</p>\n' +
         '        <p><b>Status:</b> '+task.taskStatus+'</p>\n' +
         '        <button class="delete">DELETE TASK</button>\n' +
+        '        <button class="complete">COMPLETE TASK</button>\n' +
         '    </div>\n' +
-        '</div>\n' +
-        '<br/>';
+        '</div>\n';
     const taskContainer = document.getElementById("taskcont");
     taskContainer.innerHTML += taskHTML;
 };
+window.onload = loadTasks();
 
+//let tasks = Array.from(JSON.parse(localStorage.getItem("tasks")));
 // Use following code to test rendering of tasks
 /*
 addTask({
@@ -129,9 +140,51 @@ const clearForm = () =>{
     inputDate.value= '';
 }
 
+
+
 document.getElementById("subvin").onclick = (e) =>{
     e.preventDefault();
     addTask(getAllInputs());
-    clearForm();
+    let taskArray= retrievedTask;
+    const updateTaskArray = () =>{
+      taskArray.push(getAllInputs());
+    }
+    updateTaskArray();
+    clearForm();   
+    
+    localStorage.setItem("savedTask",JSON.stringify(taskArray));
 }
+
+/*localStorage.taskArray = JSON.stringify(taskArray);
+let data = JSON.parse(localStorage.getItem('taskArray'));
+localStorage.setItem(taskArray, taskArray);
+*/
+
+//code for delete btn below
+
+document.getElementById("subvin").addEventListener("click", billyno);
+
+function billyno() {
+let delThisNow = document.getElementsByClassName("delete");
+for (var i=0; i<delThisNow.length; i++) {
+  delThisNow[i].addEventListener("click", delDiv);
+};
+};
+let testdelete =() => {
+  console.log("delete");
+};
+
+function delDiv() {
+  this.parentNode.parentNode.parentNode.removeChild(this.parentNode.parentNode);
+};
+
+
+
+// Complete Task button function WIP
+// const completeTask = () =>{
+//   const taskCompleteStatus = {
+//     'taskStatus': 'Completed'
+//   }
+// }
+
 
