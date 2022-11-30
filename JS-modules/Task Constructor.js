@@ -1,13 +1,19 @@
-/*const loadTasks = () =>{
+/*
+const loadTasks = () =>{
   let taskArray = Array.from(JSON.parse(localStorage.getItem("taskArray")));
   taskArray.forEach(task =>taskContainer.innerHTML = addTask(taskArray(task)));
 };
-*/
-let taskArray = [];
+
+
 let savedTask = JSON.parse(localStorage.getItem("taskArray")) || [];
 
-
-
+*/
+let taskArray = [];
+var retrievedTask = JSON.parse(localStorage.getItem("savedTask")) || [];
+const loadTasks = () =>{
+  let taskArray = retrievedTask;
+  taskArray.forEach(taskItem => addTask(taskItem));
+};
 
 
 
@@ -27,8 +33,8 @@ addTask = (task) => {
     const taskContainer = document.getElementById("taskcont");
     taskContainer.innerHTML += taskHTML;
 };
-window.onload = addTask(taskArray);
-
+window.onload = loadTasks();
+window.onload = 
 //let tasks = Array.from(JSON.parse(localStorage.getItem("tasks")));
 // Use following code to test rendering of tasks
 /*
@@ -153,12 +159,14 @@ document.getElementById("subvin").onclick = (e) =>{
       taskArray.push(getAllInputs());
     }
     updateTaskArray();
-    clearForm();
+    clearForm();   
+    localStorage.setItem("savedTask",JSON.stringify(taskArray));
 }
-localStorage.taskArray = JSON.stringify(taskArray);
+
+/*localStorage.taskArray = JSON.stringify(taskArray);
 let data = JSON.parse(localStorage.getItem('taskArray'));
 localStorage.setItem(taskArray, taskArray);
-
+*/
 
 //code for delete btn below
 
