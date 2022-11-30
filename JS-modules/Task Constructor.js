@@ -1,13 +1,3 @@
-/*
-const loadTasks = () =>{
-  let taskArray = Array.from(JSON.parse(localStorage.getItem("taskArray")));
-  taskArray.forEach(task =>taskContainer.innerHTML = addTask(taskArray(task)));
-};
-
-
-let savedTask = JSON.parse(localStorage.getItem("taskArray")) || [];
-
-*/
 let taskArray = [];
 var retrievedTask = JSON.parse(localStorage.getItem("savedTask")) || [];
 const loadTasks = () =>{
@@ -34,7 +24,7 @@ addTask = (task) => {
     taskContainer.innerHTML += taskHTML;
 };
 window.onload = loadTasks();
-window.onload = 
+
 //let tasks = Array.from(JSON.parse(localStorage.getItem("tasks")));
 // Use following code to test rendering of tasks
 /*
@@ -155,11 +145,13 @@ const clearForm = () =>{
 document.getElementById("subvin").onclick = (e) =>{
     e.preventDefault();
     addTask(getAllInputs());
+    let taskArray= retrievedTask;
     const updateTaskArray = () =>{
       taskArray.push(getAllInputs());
     }
     updateTaskArray();
     clearForm();   
+    
     localStorage.setItem("savedTask",JSON.stringify(taskArray));
 }
 
