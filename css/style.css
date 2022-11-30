@@ -49,11 +49,25 @@
     background: #ffffff;
     opacity: 1;
   }
-
-  /* Date and time colour */
+  /* Date&time colour */
   #time {
     color: black;
+    background-color: rgb(63, 61, 61);
+    z-index: -1;
   }
+
+ /* Date&Time Border styling */
+span#time {
+    border-radius: 10px 10px;
+    border-style: inset;
+    border-color: cyan;
+    padding: 5px 5px;
+}
+/* Date&Time Hover */
+span#time:hover {
+    color: rgb(250, 248, 248);
+    background: rgb(34, 33, 33);
+}
   
   /* Hovering over button will allow the user to know when the button is being hovered over via change in button appearanch*/
   
@@ -207,7 +221,7 @@ button.complete:hover{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 40em;
+    height: 30em;
     overflow: hidden;
     transition: 5sec ease-out;
     max-height: 10vh;
