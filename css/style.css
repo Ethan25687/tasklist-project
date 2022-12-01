@@ -51,13 +51,10 @@
   }
   /* Date&time colour */
   #time {
-    background: #ffffff;
-    color: rgb(33, 172, 214);
+    background: rgba(255,255,255, .75);
+    color: rgba(37, 124, 139, 0.877);
     z-index: 1;
     font-weight: bold;
-    -webkit-animation: glow 1s ease-in-out infinite alternate;
-    -moz-animation: glow 1s ease-in-out infinite alternate;
-    animation: glow 1s ease-in-out infinite alternate;
   }
 
  /*Date&Time Border styling*/ 
