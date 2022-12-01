@@ -12,7 +12,7 @@ setInterval(() =>{
         hour = 12;
     }
     if(hour > 12){
-        hour = hh - 12;
+        hour = hour - 12;
         session = "PM";
     }
 
@@ -22,4 +22,4 @@ setInterval(() =>{
 let currentDate = `Current Time ${hour}:${min} ${session} <br>Todays Date ${day}-${month}-${year}`;
 const dateH = document.getElementById('time');
 dateH.innerHTML = `${currentDate}`;
-}, 1000)
+}, 1000);
