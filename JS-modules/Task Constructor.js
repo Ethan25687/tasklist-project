@@ -6,7 +6,6 @@ const loadTasks = () => {
 };
 
 
-
 addTask = (task) => {
   const taskHTML =
     '<div class="taskbox" id="taskWrap" style="width: 20rem;">\n' +
@@ -99,20 +98,33 @@ document.getElementById("subvin").onclick = (e) => {
 
 //code for delete btn below
 
-document.getElementById("subvin").addEventListener("click", billyno);
-
-function billyno() {
+document.getElementById("subvin").addEventListener("click", delThisTask);
+window.addEventListener('load', delThisTask);
+function delThisTask() {
   let delThisNow = document.getElementsByClassName("delete");
-  for (var i = 0; i < delThisNow.length; i++) {
-    delThisNow[i].addEventListener("click", delDiv);
+  for (var i=0; i<delThisNow.length; i++) {
+    delThisNow[i].addEventListener("click", delCrntTsk);
   };
 };
-let testdelete = () => {
-  console.log("delete");
-};
 
-function delDiv() {
+
+function delCrntTsk() {
+  //Gets the value of the taskname input on page.
+  let aqTrgt = this.parentNode.firstElementChild.innerHTML;
+  let getTrgt = aqTrgt.replace('<b>Task:</b> ','')
+  console.log(getTrgt);
+  //Gets the array location of the object matching getTrgt.
+  let aim = retrievedTask.findIndex(object => {
+    return object.taskName === getTrgt;
+  });
+  
+  console.log(aim);
+  retrievedTask.splice(aim, 1);
+  
+  //Below removes the task from view.
   this.parentNode.parentNode.parentNode.removeChild(this.parentNode.parentNode);
+  //below sends the modified array to local storage.
+  localStorage.setItem("savedTask",JSON.stringify(retrievedTask));
 };
 
 // Complete Task button function
