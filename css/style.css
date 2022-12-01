@@ -150,21 +150,23 @@ Hovering over button will allow the user to know when the button is being hovere
   
   /* Start of Task container + Task boxes */
   
-  div.container{
+  #taskcont {
+    background-image: url('/Images/corkboard.png');
+    background-size:cover;
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
-    min-height: 75vh;
-  }
-
-  #taskcont {
-    background-image: url('/Images/corkboard.png');
-    background-size:cover;
-    border: solid white 5px;
+    min-height: 65vh;
+    border: solid rgb(218, 218, 218) 5px;
   }
   
   .taskbox{
+    background-image: url('/Images/pushpin.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-size: 2rem 2rem;
     font-size: 1.3em;
     height: 15em;
     width: 30%;
@@ -235,8 +237,7 @@ button.complete:hover{
     height: 30em;
     overflow: hidden;
     transition: 5sec ease-out;
-    max-height: 10vh;
-  
+    max-height: 20vh;
     background-color: #FFFFFF;
     position: relative;
   }
@@ -300,7 +301,7 @@ button.complete:hover{
     margin-left: auto;
     padding: 10px;
     color: black;
-    border: 1px solid white;
+    border: 1px solid rgb(255, 255, 255);
     border-radius: 5px/10px;
     text-decoration: none;
     font-weight: bold;
