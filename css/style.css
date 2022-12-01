@@ -51,25 +51,36 @@
   }
   /* Date&time colour */
   #time {
-    color: black;
-    background-color: rgb(63, 61, 61);
-    z-index: -1;
+    background: #ffffff;
+    color: rgb(33, 172, 214);
+    z-index: 1;
+    font-weight: bold;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
   }
 
- /* Date&Time Border styling */
+ /*Date&Time Border styling*/ 
 span#time {
     border-radius: 10px 10px;
     border-style: inset;
     border-color: cyan;
     padding: 5px 5px;
+    z-index: 1;
 }
-/* Date&Time Hover */
+
+/* Date&Time Hover 
 span#time:hover {
-    color: rgb(250, 248, 248);
-    background: rgb(34, 33, 33);
+    background: #ffffff;
+    color: rgb(33, 172, 214);
+    scale: 1.1;
+    position: relative;
+    left: 1em;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
 }
-  
-  /* Hovering over button will allow the user to know when the button is being hovered over via change in button appearanch*/
+Hovering over button will allow the user to know when the button is being hovered over via change in button appearanch*/
   
   .taskbutton:hover {
     background: #CCF4FA;

@@ -7,7 +7,7 @@ let year = date.getFullYear();
 let hour = date.getHours();
 let min = date.getMinutes();
 
-let currentDate = `${hour}:${min} | ${day}-${month}-${year}`;
+let currentDate = `Current Time ${hour}:${min} <br>Todays Date ${day}-${month}-${year}`;
 const dateH = document.getElementById('time');
-dateH.innerHTML = `Current date ${currentDate}`;
+dateH.innerHTML = `${currentDate}`;
 }, 1000)
