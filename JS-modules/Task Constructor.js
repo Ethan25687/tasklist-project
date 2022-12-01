@@ -98,26 +98,13 @@ document.getElementById("subvin").onclick = (e) => {
 
 //code for delete btn below
 
-<<<<<<< HEAD
 document.getElementById("subvin").addEventListener("click", delThisTask);
 window.addEventListener('load', delThisTask);
 function delThisTask() {
-let delThisNow = document.getElementsByClassName("delete");
-for (var i=0; i<delThisNow.length; i++) {
-  delThisNow[i].addEventListener("click", delCrntTsk);
-};
-=======
-document.getElementById("subvin").addEventListener("click", billyno);
-
-function billyno() {
   let delThisNow = document.getElementsByClassName("delete");
-  for (var i = 0; i < delThisNow.length; i++) {
-    delThisNow[i].addEventListener("click", delDiv);
+  for (var i=0; i<delThisNow.length; i++) {
+    delThisNow[i].addEventListener("click", delCrntTsk);
   };
-};
-let testdelete = () => {
-  console.log("delete");
->>>>>>> 9aa48401e1e248596a88230530dc4ab8282b3342
 };
 
 
@@ -142,16 +129,7 @@ function delCrntTsk() {
 
 // Complete Task button function
 
-<<<<<<< HEAD
-//Below is code to check the contents of "retrievedTask"
- // window.setInterval( function() {
- //   console.log(retrievedTask);
- // }, 4000);
-//
-
-=======
 document.getElementById("subvin").addEventListener("click", completeTsk);
->>>>>>> 9aa48401e1e248596a88230530dc4ab8282b3342
 
 function completeTsk() {
   let completeTskBtn = document.getElementsByClassName("complete");
