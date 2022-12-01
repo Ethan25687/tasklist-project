@@ -1,171 +1,190 @@
 /*Background colour*/
-  body {
-    background-image: url("../Images/mesh-gradient.png");
-    background-size: cover;
-    background-color: white;
-  }
-  /*End of Background colour*/
-  
-  /* Start of EVERYTHING Ruleset */
-  * {
-    font-family: "Oswald", sans-serif;
-  }
-  /* End of EVERYTHING Ruleset */
+body {
+  background-image: url("../Images/mesh-gradient.png");
+  background-size: cover;
+  background-color: white;
+}
 
-  /*  Start of Steven's Oswald Font by Ethan - To add: font-family: 'Oswald', sans-serif;*/
-  @font-face {
-    font-family: 'Oswald', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    src: url(https://fonts.gstatic.com/s/oswald/v49/TK3_WkUHHAIjg75cFRf3bXL8LICs1_FvsUZiZQ.woff2) format('woff2');
-  }
-  /*  End of Steven's Oswald Font by Ethan */
-  
-  /* Start of popup window "Add Task" -Billy*/
-  /*A pop up window will keep the page neet as it seperates the add task section from the list*/
-  
-  .box {
-    width: 100%;
-    margin: 0 auto;
-    padding-top: 1em;
-    padding-bottom: 1em;
-    background-clip: padding-box;
-    text-align: center;
-    opacity: 1;
-  }
-  
-  .taskbutton {
-    font-size: 1.2em;
-    margin-right: auto;
-    margin-left: auto;
-    padding: 10px;
-    color: black;
-    border: 1px solid black;
-  
-    text-decoration: none;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s ease-out;
-    background: #ffffff;
-    opacity: 1;
-  }
+/*End of Background colour*/
 
-  /* Date and time colour */
-  #time {
-    color: black;
-  }
-  
-  /* Hovering over button will allow the user to know when the button is being hovered over via change in button appearanch*/
-  
-  .taskbutton:hover {
-    background: #CCF4FA;
-    color: black;
-  }
-  
-  /* Overlay puts focus on the popup as it darkens the rest of the screen. Also makes it less cluttered when the popup pops up.*/
-  
-  .overlay {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.7);
-    transition: opacity 500ms;
-    visibility: hidden;
-    opacity: 0;
-  }
-  .overlay:target {
-    visibility: visible;
-    opacity: 1;
-  }
-  
-  .popup {
-    margin: 70px auto;
-    padding: 20px;
-    background: #fff;
-    border-radius: 10px;
-    width: 30%;
-    position: relative;
-    transition: all 1s ease-in-out;
-  }
-  
-  /* I wanted to seperate the status's from the rest of the selection*/
-  
-  .statbox {
-    border: 2px solid gray;
-    margin-top: 5px;
-    margin-bottom: 10px;
-    width: 100%;
-  }
-  
-  .popup .close {
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    transition: all 200ms;
-    font-size: 45px;
-    font-weight: bold;
-    text-decoration: none;
-    color: #333;
-  }
-  .popup .close:hover {
-    color: red;
-  }
-  
-  .popup .popupcontent {
-    max-height: 65%;
-    overflow: visible;
-  }
-  
-  .validColor {
-    color: rgb(126, 0, 0);
-  } 
-  /* End of popup window "Add Task" - Billy */
-  
-  /* Start of Task container + Task boxes */
-  
-  div.container{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-    min-height: 75vh;
-  }
+/* Start of EVERYTHING Ruleset */
+* {
+  font-family: "Oswald", sans-serif;
+}
 
-  #taskcont {
-    background-image: url('/Images/corkboard.png');
-    background-size:cover;
-    border: solid white 5px;
-  }
-  
-  .taskbox{
-    font-size: 1.3em;
-    height: 15em;
-    width: 30%;
-    min-width: 15em;
-    max-width: 15em;
-    padding: 0.3em;
-    margin: 1.8em;
-    color: black;
-    text-decoration: none;
-    background-color: #FFF09C;
-    justify-content: space-around;
-    overflow: hidden;
-    border: 2px solid orange;
-    text-align: justify;
-    transition: scale 0.3s;
-  }
-  
-  .taskbox:hover{
-    scale: 1.2;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    background-color: #CCF4FA;
-  }
+/* End of EVERYTHING Ruleset */
 
-button.delete{
+/*  Start of Steven's Oswald Font by Ethan - To add: font-family: 'Oswald', sans-serif;*/
+@font-face {
+  font-family: 'Oswald', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/oswald/v49/TK3_WkUHHAIjg75cFRf3bXL8LICs1_FvsUZiZQ.woff2) format('woff2');
+}
+
+/*  End of Steven's Oswald Font by Ethan */
+
+/* Start of popup window "Add Task" -Billy*/
+/*A pop up window will keep the page neet as it seperates the add task section from the list*/
+
+.box {
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  background-clip: padding-box;
   text-align: center;
-  font-weight:bold;
+  opacity: 1;
+}
+
+.taskbutton {
+  font-size: 1.2em;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 10px;
+  color: black;
+  border: 1px solid black;
+
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+  background: #ffffff;
+  opacity: 1;
+}
+
+/* Date&time colour */
+#time {
+  background: rgba(255, 255, 255, .75);
+  color: rgba(37, 124, 139, 0.877);
+  z-index: 1;
+  font-weight: bold;
+}
+
+/*Date&Time Border styling*/
+span#time {
+  border-radius: 10px 10px;
+  border-style: inset;
+  border-color: cyan;
+  padding: 5px 5px;
+  z-index: 1;
+}
+
+
+.taskbutton:hover {
+  background: #CCF4FA;
+  color: black;
+}
+
+/* Overlay puts focus on the popup as it darkens the rest of the screen. Also makes it less cluttered when the popup pops up.*/
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  width: 30%;
+  position: relative;
+  transition: all 1s ease-in-out;
+}
+
+/* I wanted to seperate the status's from the rest of the selection*/
+
+.statbox {
+  border: 2px solid gray;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 45px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+
+.popup .close:hover {
+  color: red;
+}
+
+.popup .popupcontent {
+  max-height: 65%;
+  overflow: visible;
+}
+
+.validColor {
+  color: rgb(126, 0, 0);
+}
+
+/* End of popup window "Add Task" - Billy */
+
+/* Start of Task container + Task boxes */
+
+#taskcont {
+  background-image: url('/Images/corkboard.png');
+  background-size: cover;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 65vh;
+  border: solid rgb(218, 218, 218) 5px;
+}
+
+.taskbox {
+  background-image: url('/Images/pushpin.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-size: 2rem 2rem;
+  font-size: 1.3em;
+  height: 15em;
+  width: 30%;
+  min-width: 15em;
+  max-width: 15em;
+  padding: 0.3em;
+  margin: 1.8em;
+  color: black;
+  text-decoration: none;
+  background-color: #FFF09C;
+  justify-content: space-around;
+  overflow: hidden;
+  border: 2px solid orange;
+  text-align: justify;
+  transition: scale 0.3s;
+}
+
+.taskbox:hover {
+  scale: 1.2;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  background-color: #CCF4FA;
+}
+
+button.delete {
+  text-align: center;
+  font-weight: bold;
   background-color: #925961;
   color: #ffffff;
   border: none;
@@ -177,13 +196,13 @@ button.delete{
   transition: 0.3s;
 }
 
-button.delete:hover{
+button.delete:hover {
   background-color: #b60b22;
 }
 
-button.complete{
+button.complete {
   text-align: center;
-  font-weight:bold;
+  font-weight: bold;
   background-color: #599265;
   color: #ffffff;
   border: none;
@@ -195,124 +214,131 @@ button.complete{
   transition: 0.3s;
 }
 
-button.complete:hover{
+button.complete:hover {
   background-color: #0bb627;
 }
+
 /* End of Task container + Task boxes */
-  
-  /* Start of Img Banner by Ethan S*/
-  .Banner-Img-Container {
-    background-image: url("../Images/Banners/Banner4.png");
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 40em;
-    overflow: hidden;
-    transition: 5sec ease-out;
-    max-height: 10vh;
-  
-    background-color: #FFFFFF;
-    position: relative;
-  }
-  /* End of Img Banner */
-      
-  /* Start of To-Left + Do-Right Stuff */
-  div.To-Left {
-    text-align: center;
-    font-size: 3em;
-    align-content: center;
-    padding-left: 10%;
-    padding-right: 10%;
-    color: white;
-    text-shadow: 2px 2px gray;
-    -webkit-animation: glow 1s ease-in-out infinite alternate;
-    -moz-animation: glow 1s ease-in-out infinite alternate;
-    animation: glow 1s ease-in-out infinite alternate;
-  }
-  div.Do-Right {
-    text-align: center;
-    font-size: 3em;
-    align-content: center;
-    padding-left: 10%;
-    padding-right: 10%;
-    color: white;
-    text-shadow: 2px 2px gray;
-    -webkit-animation: glow 1s ease-in-out infinite alternate;
-    -moz-animation: glow 1s ease-in-out infinite alternate;
-    animation: glow 1s ease-in-out infinite alternate;
+
+/* Start of Img Banner by Ethan S*/
+.Banner-Img-Container {
+  background-image: url("../Images/Banners/Banner4.png");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30em;
+  overflow: hidden;
+  transition: 5sec ease-out;
+  max-height: 20vh;
+  background-color: #FFFFFF;
+  position: relative;
+}
+
+/* End of Img Banner */
+
+/* Start of To-Left + Do-Right Stuff */
+div.To-Left {
+  text-align: center;
+  font-size: 3em;
+  align-content: center;
+  padding-left: 10%;
+  padding-right: 10%;
+  color: white;
+  text-shadow: 2px 2px gray;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+div.Do-Right {
+  text-align: center;
+  font-size: 3em;
+  align-content: center;
+  padding-left: 10%;
+  padding-right: 10%;
+  color: white;
+  text-shadow: 2px 2px gray;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #409de3, 0 0 40px #0756bd, 0 0 50px #001aff, 0 0 60px #0d4cc2, 0 0 70px #2090c0;
   }
 
-  @-webkit-keyframes glow {
-    from {
-      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #409de3, 0 0 40px #0756bd, 0 0 50px #001aff, 0 0 60px #0d4cc2, 0 0 70px #2090c0;
-    }
-    to {
-      text-shadow: 0 0 20px #fff, 0 0 30px #324ace, 0 0 40px #0000ffc7, 0 0 50px #1762d4, 0 0 60px #1d2ddc, 0 0 70px #1b97df, 0 0 80px #13a9db;
-    }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #324ace, 0 0 40px #0000ffc7, 0 0 50px #1762d4, 0 0 60px #1d2ddc, 0 0 70px #1b97df, 0 0 80px #13a9db;
   }
-  /* End of To-Left + Do-Right Stuff */
-  
-  /* Start of Footer Stuff */
-  #foot {
-    width: 300px;
-    margin-right: auto;
-    margin-left: auto;
-    background: black;
-    opacity: 0.75;
-    border-radius: 10px;
-  }
-  
-  #flist {
-    color: white;
-    opacity: 1;
-  }
-  
-  #btopb {
-    font-size: 1.4em;
-    text-align: center;
-    margin-right: auto;
-    margin-left: auto;
-    padding: 10px;
-    color: black;
-    border: 1px solid white;
-    border-radius: 5px/10px;
-    text-decoration: none;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s ease-out;
-    background: #ffffff;
-    opacity: 0.9;
-  }
-  
-  #btopb:hover {
-    background: #CCF4FA;
-  }
-  .btlist {
-    text-decoration: none;
-    color: white;
-  }
-  .btlist:hover {
-    color: yellow;
-  }
-  
-  #btt {
-    text-decoration: none;
-    color: black;
-  }
-  /* End of Footer Stuff */
+}
 
-  /* Start of Responsive Stuff */
-  @media screen and (max-width: 700px){
-    .popup{
-      width: 50%;
-    }
-  }
-  @media screen and (min-width: 1050px){
-    .popup{
-      width: 25%;
-    }
-  }
-  /* End of Responsive Stuff */
+/* End of To-Left + Do-Right Stuff */
 
-  
+/* Start of Footer Stuff */
+#foot {
+  width: 300px;
+  margin-right: auto;
+  margin-left: auto;
+  background: black;
+  opacity: 0.75;
+  border-radius: 10px;
+}
+
+#flist {
+  color: white;
+  opacity: 1;
+}
+
+#btopb {
+  font-size: 1.4em;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 10px;
+  color: black;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 5px/10px;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+  background: #ffffff;
+  opacity: 0.9;
+}
+
+#btopb:hover {
+  background: #CCF4FA;
+}
+
+.btlist {
+  text-decoration: none;
+  color: white;
+}
+
+.btlist:hover {
+  color: yellow;
+}
+
+#btt {
+  text-decoration: none;
+  color: black;
+}
+
+/* End of Footer Stuff */
+
+/* Start of Responsive Stuff */
+@media screen and (max-width: 700px) {
+  .popup {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 1050px) {
+  .popup {
+    width: 25%;
+  }
+}
+
+/* End of Responsive Stuff */
