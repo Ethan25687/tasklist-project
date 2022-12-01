@@ -178,13 +178,17 @@ function delDiv() {
   this.parentNode.parentNode.parentNode.removeChild(this.parentNode.parentNode);
 };
 
+// Complete Task button function
 
+document.getElementById("subvin").addEventListener("click", completeTsk);
 
-// Complete Task button function WIP
-// const completeTask = () =>{
-//   const taskCompleteStatus = {
-//     'taskStatus': 'Completed'
-//   }
-// }
+function completeTsk() {
+  let completeTskBtn = document.getElementsByClassName("complete");
+  for (var i=0; i<completeTskBtn.length; i++) {
+    completeTskBtn[i].addEventListener("click", UpdateTskToComplete);
+  };
+};
 
-
+function UpdateTskToComplete() {
+  this.parentNode.childNodes[9].innerHTML = '<b>Status:</b> Completed</p>';
+}
