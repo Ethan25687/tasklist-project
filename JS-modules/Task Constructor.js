@@ -6,10 +6,10 @@ const loadTasks = () => {
 };
 
 
-addTask = (task) => {
+addTask = (task) => {  // addTask renders Tasks on Website via taking 
   const taskHTML =
-    '<div class="taskbox" id="taskWrap" style="width: 20rem;">\n' +
-    '    <div>\n' +
+    '<div class="taskbox" id="taskWrap" style="width: 20rem;">\n' + // Task container
+    '    <div>\n' + // Task container for Task Text
     '        <h2><b>Task:</b> ' + task.taskName + '</h2>\n' +
     '        <p><b>Description:</b> ' + task.taskDescription + '</p>\n' +
     '        <p><b>Assigned to:</b> ' + task.taskAssignedTo + '</p>\n' +
@@ -129,15 +129,29 @@ function delCrntTsk() {
 
 // Complete Task button function
 
-document.getElementById("subvin").addEventListener("click", completeTsk);
+document.getElementById("subvin").addEventListener("click", cmpltTsk);
+window.addEventListener('load', cmpltTsk);
 
-function completeTsk() {
+function cmpltTsk() {
   let completeTskBtn = document.getElementsByClassName("complete");
-  for (var i = 0; i < completeTskBtn.length; i++) {
-    completeTskBtn[i].addEventListener("click", UpdateTskToComplete);
+  for (let i = 0; i < completeTskBtn.length; i++) {
+    completeTskBtn[i].onclick = cmpltCrntTsk;
   };
 };
 
-function UpdateTskToComplete() {
-  this.parentNode.childNodes[9].innerHTML = '<b>Status:</b> Completed</p>';
-}
+function cmpltCrntTsk() {
+  //Gets the value of the taskname input on page.
+  let aqTrgt = this.parentNode.firstElementChild.innerHTML;
+  let getTrgt = aqTrgt.replace('<b>Task:</b> ','')
+  //Gets the array location of the object matching getTrgt.
+  let aim = retrievedTask.findIndex(object => {
+    return object.taskName === getTrgt;
+  });
+  
+  retrievedTask[aim].taskStatus = 'Completed';
+  
+  //Below updates the task in view.
+  this.parentNode.childNodes[9].innerHTML = '<b>Status:</b> Completed';
+  //below sends the modified array to local storage.
+  localStorage.setItem('savedTask',JSON.stringify(retrievedTask));
+};

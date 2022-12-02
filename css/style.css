@@ -143,7 +143,7 @@ span#time {
 /* Start of Task container + Task boxes */
 
 #taskcont {
-  background-image: url('/Images/corkboard.png');
+  background-image: url('../Images/corkboard.png');
   background-size: cover;
   display: flex;
   justify-content: space-around;
@@ -154,7 +154,7 @@ span#time {
 }
 
 .taskbox {
-  background-image: url('/Images/pushpin.png');
+  background-image: url('../Images/pushpin.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position-x: center;
