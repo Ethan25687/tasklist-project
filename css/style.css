@@ -66,8 +66,11 @@ span#time {
   border-radius: 10px 10px;
   border-style: inset;
   border-color: cyan;
-  padding: 5px 5px;
+  padding: 3px 3px;
   z-index: 1;
+  position: absolute;
+  bottom: 2%;
+  align-self: center;
 }
 
 
