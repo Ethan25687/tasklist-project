@@ -57,7 +57,7 @@ body {
 #time {
   background: rgba(255, 255, 255, .75);
   color: rgba(37, 124, 139, 0.877);
-  z-index: 1;
+  z-index: -1;
   font-weight: bold;
 }
 
@@ -67,7 +67,7 @@ span#time {
   border-style: inset;
   border-color: cyan;
   padding: 3px 3px;
-  z-index: 1;
+  z-index: 0;
   position: absolute;
   bottom: 2%;
   align-self: center;
